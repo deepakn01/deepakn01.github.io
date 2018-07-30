@@ -77,7 +77,9 @@
 			<div class="legend"> <p class="usertype"><span class="key-dot cust"></span>Customer</p> </div>
 			<div class="legend"> <p class="usertype"><span class="key-dot sub"></span>Subscriber</p> </div>
 	  </div>
+  <div id="chart" style="position: absolute; top: 0%; left: 5%; width: 600px">
   <svg width="600" height="120"></svg>
+  </div>
   
 	<div style="position: absolute; top: 75px; left: 275px; width: 240px">
 	<br><br><br><br>
@@ -110,7 +112,7 @@
       var innerWidth  = outerWidth  - margin.left - margin.right;
       var innerHeight = outerHeight - margin.top  - margin.bottom;
 
-      var svg = d3.select("body").append("svg")
+      var svg = d3.select("#chart").append("svg")
         .attr("width", outerWidth)
         .attr("height", outerHeight);
       var g = svg.append("g")
